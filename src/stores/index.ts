@@ -1,4 +1,4 @@
-import { randstr } from '@/utils/stringUtils'
+import { randstr } from '@/lib/utils'
 import {
   Edge,
   Node,
