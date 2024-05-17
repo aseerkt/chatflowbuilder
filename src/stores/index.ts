@@ -24,6 +24,8 @@ type RFState = {
   setEdges: (edges: Edge[]) => void
   setReactFlowInstance: (instance: ReactFlowInstance) => void
 
+  isSinglyConnected: () => boolean
+
   nodeId?: string
   nodeType?: string
   updateNode: (node: Node) => void
@@ -102,9 +104,43 @@ const useStore = create<RFState>((set, get) => ({
   deselectNode() {
     set({ nodeId: undefined, nodeType: undefined })
   },
+  isSinglyConnected() {
+    const graph: Record<string, string[]> = {}
+    get().nodes.forEach((node) => {
+      graph[node.id] = []
+    })
+    get().edges.forEach((edge) => {
+      const { source, target } = edge
+      graph[source].push(target)
+      graph[target].push(source)
+    })
+
+    // Use a set to keep track of visited nodes
+    const visited = new Set<string>()
+
+    function dfs(node: string) {
+      // If the node is already visited, return
+      if (visited.has(node)) {
+        return
+      }
+      // Mark the node as visited
+      visited.add(node)
+      // Visit all the neighbors
+      graph[node].forEach((neighbor) => {
+        dfs(neighbor)
+      })
+    }
+
+    if (get().nodes.length === 0) {
+      return true
+    }
+    dfs(get().nodes[0].id)
+
+    return get().nodes.length === visited.size
+  },
 }))
 
-export const defaultSelector = (state: RFState) => ({
+export const baseSelector = (state: RFState) => ({
   nodes: state.nodes,
   edges: state.edges,
   onNodesChange: state.onNodesChange,
@@ -112,6 +148,7 @@ export const defaultSelector = (state: RFState) => ({
   onConnect: state.onConnect,
   setReactFlowInstance: state.setReactFlowInstance,
   onDrop: state.onDrop,
+  isSingleConnected: state.isSinglyConnected,
 })
 
 export const nodeSelector = (state: RFState) => ({
