@@ -15,3 +15,15 @@ pnpm dev
 ```bash
 pnpm test
 ```
+- Run E2E tests
+```bash
+pnpm test:e2e
+```
+- Run E2E tests in UI mode
+```bash
+pnpm test:e2e:ui
+```
+- Run E2E tests codegen
+```bash
+pnpm test:e2e:gen
+```
