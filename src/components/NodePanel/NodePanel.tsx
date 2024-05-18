@@ -10,9 +10,10 @@ export default function NodePanel() {
   }
 
   return (
-    <div className='p-3'>
+    <div className='p-3' role='listbox'>
       <div
         className='flex w-[200px] cursor-grab flex-col items-center gap-y-3 rounded-md border-2 border-green-600 p-3 text-green-600 shadow-sm'
+        role='option'
         draggable
         onDragStart={(event) => onDragStart(event, 'textNode')}
       >
