@@ -15,6 +15,7 @@ const SourceHandle = ({ ...props }: CustomHandleProps) => {
     return getConnectedEdges([node], edges).every(
       (edge) => edge.sourceHandle !== props.id,
     )
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [edges])
 
   return <Handle {...props} type='source' isConnectable={isHandleConnectable} />

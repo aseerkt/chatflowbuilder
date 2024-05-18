@@ -38,6 +38,7 @@ export const mockReactFlow = () => {
 
   global.ResizeObserver = ResizeObserver
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   global.DOMMatrixReadOnly = DOMMatrixReadOnly
 
@@ -53,6 +54,7 @@ export const mockReactFlow = () => {
       },
     },
   })
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ;(global.SVGElement as any).prototype.getBBox = () => ({
     x: 0,
     y: 0,
