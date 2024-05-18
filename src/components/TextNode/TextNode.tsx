@@ -1,35 +1,10 @@
 import useStore from '@/stores'
 import { IconBrandWhatsapp, IconMessage } from '@tabler/icons-react'
-import { useMemo } from 'react'
-import {
-  Handle,
-  HandleProps,
-  NodeProps,
-  Position,
-  getConnectedEdges,
-  useNodeId,
-} from 'reactflow'
+import { Handle, NodeProps, Position } from 'reactflow'
+import SourceHandle from './SourceHandle'
 
-type TextNodeData = {
+export type TextNodeData = {
   message: string
-}
-
-type CustomHandleProps = Omit<HandleProps, 'isConnectable'>
-
-const SourceHandle = ({ ...props }: CustomHandleProps) => {
-  const nodeId = useNodeId()
-  const { node, edges } = useStore((state) => ({
-    edges: state.edges,
-    node: state.nodes.find((node) => node.id === nodeId)!,
-  }))
-
-  const isHandleConnectable = useMemo(() => {
-    return getConnectedEdges([node], edges).every(
-      (edge) => edge.sourceHandle !== props.id,
-    )
-  }, [edges])
-
-  return <Handle {...props} type='source' isConnectable={isHandleConnectable} />
 }
 
 export default function TextNode(props: NodeProps<TextNodeData>) {
@@ -40,7 +15,7 @@ export default function TextNode(props: NodeProps<TextNodeData>) {
   }
 
   const targetHandleId = `target_${props.id}`
-  const sourceHandleId = `target_${props.id}`
+  const sourceHandleId = `source_${props.id}`
 
   return (
     <>

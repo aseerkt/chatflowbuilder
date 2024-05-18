@@ -12,7 +12,7 @@ import {
 } from 'reactflow'
 import { create } from 'zustand'
 
-type RFState = {
+export type RFState = {
   nodes: Node[]
   edges: Edge[]
   reactFlowInstance?: ReactFlowInstance
@@ -139,21 +139,5 @@ const useStore = create<RFState>((set, get) => ({
     return get().nodes.length === visited.size
   },
 }))
-
-export const baseSelector = (state: RFState) => ({
-  nodes: state.nodes,
-  edges: state.edges,
-  onNodesChange: state.onNodesChange,
-  onEdgesChange: state.onEdgesChange,
-  onConnect: state.onConnect,
-  setReactFlowInstance: state.setReactFlowInstance,
-  onDrop: state.onDrop,
-  isSingleConnected: state.isSinglyConnected,
-})
-
-export const nodeSelector = (state: RFState) => ({
-  nodeId: state.nodeId,
-  nodeType: state.nodeType,
-})
 
 export default useStore

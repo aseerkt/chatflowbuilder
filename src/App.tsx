@@ -1,12 +1,13 @@
+import { Header } from '@/components/Header'
 import { Sidebar } from '@/components/Sidebar'
 import { TextNode } from '@/components/TextNode'
-import useStore, { baseSelector } from '@/stores'
+import { Button } from '@/components/ui/button'
+import { useToast } from '@/components/ui/use-toast'
+import useStore from '@/stores'
 import { useCallback } from 'react'
 import ReactFlow, { Background, NodeTypes } from 'reactflow'
 import { useShallow } from 'zustand/react/shallow'
-import { Header } from './components/Header'
-import { Button } from './components/ui/button'
-import { useToast } from './components/ui/use-toast'
+import { baseSelector } from './stores/selectors'
 
 const nodeTypes: NodeTypes = { textNode: TextNode }
 

@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Header /> tests > should match snapshot 1`] = `
+<body>
+  <div>
+    <header
+      class="flex h-[90px] items-center justify-between border-b bg-orange-50 px-6"
+    >
+      <h1
+        class="text-2xl font-bold"
+      >
+        Chat Flow Builder
+      </h1>
+      Hello World
+    </header>
+  </div>
+</body>
+`;

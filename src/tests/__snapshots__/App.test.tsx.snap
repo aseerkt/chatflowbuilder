@@ -1,0 +1,173 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<App /> tests > should match snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="h-full"
+    >
+      <header
+        class="flex h-[90px] items-center justify-between border-b bg-orange-50 px-6"
+      >
+        <h1
+          class="text-2xl font-bold"
+        >
+          Chat Flow Builder
+        </h1>
+        <button
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+        >
+          Save Changes
+        </button>
+      </header>
+      <div
+        class="flex h-[calc(100%-90px)]"
+      >
+        <main
+          class="grow"
+        >
+          <div
+            class="react-flow"
+            data-testid="rf__wrapper"
+            style="width: 100%; height: 100%; overflow: hidden; position: relative; z-index: 0;"
+          >
+            <div
+              class="react-flow__renderer"
+              style="position: absolute; width: 100%; height: 100%; top: 0px; left: 0px;"
+            >
+              <div
+                class="react-flow__pane"
+                style="position: absolute; width: 100%; height: 100%; top: 0px; left: 0px;"
+              >
+                <div
+                  class="react-flow__viewport react-flow__container"
+                  style="transform: translate(0px,0px) scale(1);"
+                >
+                  <svg
+                    class="react-flow__edges react-flow__container"
+                    height="100"
+                    style="z-index: 0;"
+                    width="100"
+                  >
+                    <defs />
+                    <g />
+                  </svg>
+                  <div
+                    class="react-flow__edgelabel-renderer"
+                  />
+                  <div
+                    class="react-flow__nodes"
+                    style="position: absolute; width: 100%; height: 100%; top: 0px; left: 0px;"
+                  />
+                </div>
+              </div>
+            </div>
+            <svg
+              class="react-flow__background"
+              data-testid="rf__background"
+              style="position: absolute; width: 100%; height: 100%; top: 0px; left: 0px;"
+            >
+              <pattern
+                height="20"
+                id="pattern-1undefined"
+                patternTransform="translate(-0.5,-0.5)"
+                patternUnits="userSpaceOnUse"
+                width="20"
+                x="0"
+                y="0"
+              >
+                <circle
+                  cx="0.5"
+                  cy="0.5"
+                  fill="green"
+                  r="0.5"
+                />
+              </pattern>
+              <rect
+                fill="url(#pattern-1undefined)"
+                height="100%"
+                width="100%"
+                x="0"
+                y="0"
+              />
+            </svg>
+            <div
+              class="react-flow__panel react-flow__attribution bottom right"
+              data-message="Please only hide this attribution when you are subscribed to React Flow Pro: https://reactflow.dev/pro"
+              style="pointer-events: all;"
+            >
+              <a
+                aria-label="React Flow attribution"
+                href="https://reactflow.dev"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                React Flow
+              </a>
+            </div>
+            <div
+              id="react-flow__node-desc-1"
+              style="display: none;"
+            >
+              Press enter or space to select a node.
+              You can then use the arrow keys to move the node around.
+               Press delete to remove it and escape to cancel.
+               
+            </div>
+            <div
+              id="react-flow__edge-desc-1"
+              style="display: none;"
+            >
+              Press enter or space to select an edge. You can then press delete to remove it or escape to cancel.
+            </div>
+            <div
+              aria-atomic="true"
+              aria-live="assertive"
+              id="react-flow__aria-live-1"
+              style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(100%);"
+            />
+          </div>
+        </main>
+        <aside
+          class="w-[350px] border-l"
+        >
+          <div
+            class="p-3"
+          >
+            <div
+              class="flex w-[200px] cursor-grab flex-col items-center gap-y-3 rounded-md border-2 border-green-600 p-3 text-green-600 shadow-sm"
+              draggable="true"
+            >
+              <svg
+                class="tabler-icon tabler-icon-message "
+                fill="none"
+                height="56"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="56"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 9h8"
+                />
+                <path
+                  d="M8 13h6"
+                />
+                <path
+                  d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z"
+                />
+              </svg>
+              <span>
+                Message
+              </span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</body>
+`;

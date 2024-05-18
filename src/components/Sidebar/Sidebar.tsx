@@ -1,4 +1,5 @@
-import useStore, { nodeSelector } from '@/stores'
+import useStore from '@/stores'
+import { nodeSelector } from '@/stores/selectors'
 import { NodePanel } from '../NodePanel'
 import { SettingsPanel } from '../SettingsPanel'
 
