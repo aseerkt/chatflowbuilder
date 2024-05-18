@@ -8,10 +8,12 @@ exports[`<Sidebar /> tests > should render <NodePanel /> 1`] = `
     >
       <div
         class="p-3"
+        role="listbox"
       >
         <div
           class="flex w-[200px] cursor-grab flex-col items-center gap-y-3 rounded-md border-2 border-green-600 p-3 text-green-600 shadow-sm"
           draggable="true"
+          role="option"
         >
           <svg
             class="tabler-icon tabler-icon-message "
